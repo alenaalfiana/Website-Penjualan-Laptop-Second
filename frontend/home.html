@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Re:Laptop - Laptop Bekas Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  </head>
+
+  <body class="text-gray-800 scroll-smooth">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow-md z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3"
+      >
+        <h1 class="text-2xl font-bold">
+          Re:<span class="text-yellow-300">Laptop</span>
+        </h1>
+
+        <div class="space-x-6 hidden md:block">
+          <a href="#home" class="hover:text-yellow-300">Beranda</a>
+          <a href="#katalog" class="hover:text-yellow-300">Katalog</a>
+          <a href="#galeri" class="hover:text-yellow-300">Galeri</a>
+          <a href="#kontak" class="hover:text-yellow-300">Kontak</a>
+          <button
+            onclick="openLogin()"
+            class="bg-yellow-300 text-blue-800 px-4 py-1 rounded-md hover:bg-yellow-400"
+          >
+            Login
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden bg-blue-700 flex flex-col px-4 py-2 text-white"
+      >
+        <a href="#home" class="py-2">Beranda</a>
+        <a href="#katalog" class="py-2">Katalog</a>
+        <a href="#galeri" class="py-2">Galeri</a>
+        <a href="#kontak" class="py-2">Kontak</a>
+
+        <button
+          onclick="openLogin()"
+          class="mt-2 bg-yellow-300 text-blue-800 px-4 py-1 rounded-md hover:bg-yellow-400"
+        >
+          Login
+        </button>
+      </div>
+    </nav>
+
+    <!-- SECTION: BERANDA -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center bg-blue-100 pt-20"
+    >
+      <div class="text-center px-6">
+        <h2 class="text-4xl font-bold text-blue-800 mb-4">
+          Selamat Datang di Re:<span class="text-yellow-500">Laptop</span>
+        </h2>
+
+        <p class="text-lg mb-6">
+          Tempat terbaik membeli laptop bekas berkualitas dan bergaransi.
+        </p>
+
+        <a
+          href="#katalog"
+          class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+        >
+          Lihat Katalog
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION: FITUR -->
+    <section class="bg-blue-600 text-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <!-- Penawaran Terbaik -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://www.svgrepo.com/show/514230/star-badge.svg"
+              class="h-14 mb-4 invert"
+            />
+            <h3 class="font-bold text-xl mb-2">PENAWARAN TERBAIK</h3>
+            <p class="text-gray-200">
+              Harga terbaik dari kami dan seluruh rekanan.
+            </p>
+          </div>
+
+          <!-- Proses Cepat -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://www.svgrepo.com/show/533400/stopwatch.svg"
+              class="h-14 mb-4 invert"
+            />
+            <h3 class="font-bold text-xl mb-2">PROSES CEPAT</h3>
+            <p class="text-gray-200">Proses cepat, estimasi 1 jam selesai.</p>
+          </div>
+
+          <!-- Lokasi Terdekat -->
+          <div class="flex flex-col items-center">
+            <img
+              src="https://www.svgrepo.com/show/513333/location-pin-alt-1.svg"
+              class="h-14 mb-4 invert"
+            />
+            <h3 class="font-bold text-xl mb-2">LOKASI TERDEKAT</h3>
+            <p class="text-gray-200">
+              Lokasi pengecekan tersebar di Jabodetabek.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KATALOG -->
+<section id="katalog" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-800 mb-10">
+      Katalog Produk
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Dell Latitude 5490 -->
+      <a href="detail-produk-1.html" class="block bg-gray-100 rounded-lg shadow-lg p-4 hover:shadow-xl transition">
+        <img src="https://via.placeholder.com/400x250" class="rounded-md mb-4" />
+        <h3 class="font-bold text-lg text-blue-700">Dell Latitude 5490</h3>
+        <p class="text-sm mt-2">Core i5 • 8GB RAM • SSD 256GB</p>
+        <p class="text-yellow-600 font-bold mt-3">Rp 5.200.000</p>
+      </a>
+
+      <!-- Lenovo ThinkPad X270 -->
+      <a href="detail-produk-2.html" class="block bg-gray-100 rounded-lg shadow-lg p-4 hover:shadow-xl transition">
+        <img src="https://via.placeholder.com/400x250" class="rounded-md mb-4" />
+        <h3 class="font-bold text-lg text-blue-700">Lenovo ThinkPad X270</h3>
+        <p class="text-sm mt-2">Core i5 • 8GB RAM • SSD 256GB</p>
+        <p class="text-yellow-600 font-bold mt-3">Rp 4.800.000</p>
+      </a>
+
+      <!-- HP Elitebook 840 G3 -->
+      <a href="detail-produk-3.html" class="block bg-gray-100 rounded-lg shadow-lg p-4 hover:shadow-xl transition">
+        <img src="https://via.placeholder.com/400x250" class="rounded-md mb-4" />
+        <h3 class="font-bold text-lg text-blue-700">HP Elitebook 840 G3</h3>
+        <p class="text-sm mt-2">Core i7 • 8GB RAM • SSD 512GB</p>
+        <p class="text-yellow-600 font-bold mt-3">Rp 5.800.000</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- SECTION: GALERI -->
+    <section id="galeri" class="py-20 bg-blue-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-10">
+          Galeri
+        </h2>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4"
+          id="galleryGrid"
+        ></div>
+      </div>
+    </section>
+
+    <!-- SECTION: LANGKAH -->
+    <section class="bg-blue-600 text-white py-16">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        4 Langkah Mudah Jual/Beli di Re:Laptop
+      </h2>
+
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6 text-center"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="https://www.svgrepo.com/show/533293/call.svg"
+            class="w-14 h-14 mb-4 invert"
+          />
+          <h3 class="font-bold text-lg">1. HUBUNGI CS</h3>
+          <p class="text-gray-200 mt-2 text-sm">CS siap membantu kapan saja.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <img
+            src="https://www.svgrepo.com/show/533399/camera.svg"
+            class="w-14 h-14 mb-4 invert"
+          />
+          <h3 class="font-bold text-lg">2. KIRIM FOTO</h3>
+          <p class="text-gray-200 mt-2 text-sm">
+            Kirim gambar dan spesifikasi.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <img
+            src="https://www.svgrepo.com/show/533260/chat-dots.svg"
+            class="w-14 h-14 mb-4 invert"
+          />
+          <h3 class="font-bold text-lg">3. NEGOSIASI</h3>
+          <p class="text-gray-200 mt-2 text-sm">Harga dan lokasi fleksibel.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <img
+            src="https://www.svgrepo.com/show/533578/coin-hand.svg"
+            class="w-14 h-14 mb-4 invert"
+          />
+          <h3 class="font-bold text-lg">4. TRANSAKSI</h3>
+          <p class="text-gray-200 mt-2 text-sm">Deal & transaksi selesai.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KONTAK -->
+    <section id="kontak" class="py-10 bg-white">
+      <div class="max-w-5xl mx-auto px-6 bg-white rounded-xl shadow-lg pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
+          <div>
+            <h3 class="text-3xl font-bold text-blue-700 mb-4">
+              Re:Laptop Service Center
+            </h3>
+
+            <p class="text-gray-700 mb-2">
+              Jl. M.H. Thamrin, Menteng, Jakarta Pusat
+            </p>
+            <p class="text-gray-700 mb-2">
+              Jl. Jendral Sudirman, Kuningan, Jakarta Selatan
+            </p>
+
+            <div class="mt-4 space-y-2">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://www.svgrepo.com/show/532546/phone.svg"
+                  class="w-5 h-5"
+                />
+                <p>0822 1181 2288</p>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://www.svgrepo.com/show/532546/phone.svg"
+                  class="w-5 h-5"
+                />
+                <p>0857 1193 7711</p>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://www.svgrepo.com/show/513802/mail.svg"
+                  class="w-5 h-5"
+                />
+                <p class="text-blue-600">relaptop.service@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <iframe
+            class="w-full h-72 rounded-xl shadow-md"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.151829503188!2d106.816666!3d-6.229728"
+            allowfullscreen
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-700 text-white mt-12 py-14">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6"
+      >
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Tentang Kami</h3>
+          <p class="text-gray-200">
+            Re:Laptop adalah platform jual beli laptop bekas terpercaya dengan
+            proses cepat & aman.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Alamat</h3>
+
+          <div class="flex items-start gap-3 mb-3">
+            <img
+              src="https://www.svgrepo.com/show/513333/location-pin-alt-1.svg"
+              class="w-6 h-6 invert"
+            />
+            <p>Menteng – Jakarta Pusat</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <img
+              src="https://www.svgrepo.com/show/513333/location-pin-alt-1.svg"
+              class="w-6 h-6 invert"
+            />
+            <p>Kuningan – Jakarta Selatan</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Kontak</h3>
+
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="https://www.svgrepo.com/show/521934/whatsapp.svg"
+              class="w-6 h-6 invert"
+            />
+            <p>0822 1181 2288</p>
+          </div>
+
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="https://www.svgrepo.com/show/521934/whatsapp.svg"
+              class="w-6 h-6 invert"
+            />
+            <p>0857 1193 7711</p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <img
+              src="https://www.svgrepo.com/show/513802/mail.svg"
+              class="w-6 h-6 invert"
+            />
+            <p class="text-yellow-300">relaptop.service@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LOGIN POPUP -->
+    <div
+      id="loginModal"
+      class="fixed inset-0 hidden bg-black/40 flex justify-center items-center z-50"
+    >
+      <div class="bg-white w-80 p-6 rounded-lg shadow-lg">
+        <h3 class="text-center text-xl font-bold text-blue-700 mb-4">Login</h3>
+
+        <input
+          type="text"
+          placeholder="Email"
+          class="w-full border px-3 py-2 rounded mb-3"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full border px-3 py-2 rounded mb-4"
+        />
+
+        <button
+          class="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700"
+        >
+          Masuk
+        </button>
+
+        <button
+          onclick="closeLogin()"
+          class="mt-4 text-center w-full text-blue-600 hover:underline"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+
+      function openLogin() {
+        document.getElementById("loginModal").classList.remove("hidden");
+      }
+
+      function closeLogin() {
+        document.getElementById("loginModal").classList.add("hidden");
+      }
+
+      const gallery = document.getElementById("galleryGrid");
+      for (let i = 1; i <= 12; i++) {
+        gallery.innerHTML += `
+        <div class="bg-white rounded-lg shadow">
+          <img src="https://via.placeholder.com/250?text=Foto+${i}" class="rounded-md">
+        </div>`;
+      }
+    </script>
