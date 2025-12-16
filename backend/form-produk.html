@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Laptop - Tambah Produk</title>
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- AdminLTE -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+    <!-- NAVBAR --> 
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="#" class="nav-link">Re:Laptop - Dashboard Admin</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="../frontend/home.html" class="brand-link">
+            <span class="brand-text font-weight-light">Re:Laptop</span>
+        </a>
+
+        <div class="sidebar">
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column">
+
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="users-index.html" class="nav-link">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Data User</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="produk-index.html" class="nav-link active">
+                            <i class="nav-icon fas fa-laptop"></i>
+                            <p>Data Produk</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="histori-index.html" class="nav-link">
+                            <i class="nav-icon fas fa-history"></i>
+                            <p>Histori</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item mt-3">
+                        <a href="../frontend/login.html" class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content-wrapper">
+
+        <!-- HEADER -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Tambah Produk</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="produk-index.html">Produk</a></li>
+                            <li class="breadcrumb-item active">Tambah</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <section class="content">
+            <div class="container-fluid">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Form Tambah Produk</h3>
+                    </div>
+
+                    <form>
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label>Nama Produk</label>
+                                <input type="text" class="form-control"
+                                       placeholder="Masukkan nama produk">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Harga (Rp)</label>
+                                <input type="number" class="form-control"
+                                       placeholder="Masukkan harga produk">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Stok</label>
+                                <input type="number" class="form-control"
+                                       placeholder="Masukkan jumlah stok">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Deskripsi</label>
+                                <textarea class="form-control" rows="3"
+                                          placeholder="Deskripsi singkat produk"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gambar Produk</label>
+                                <input type="file" class="form-control-file">
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="produk-index.html" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Simpan Produk
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2025
+            <a href="#">Kelompok 15</a>
+        </strong>
+    </footer>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+
+</body>
+</html>

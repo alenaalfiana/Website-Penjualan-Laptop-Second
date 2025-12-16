@@ -11,7 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Re:Laptop - Jual/Beli Laptop Second</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet"
+  <link rel="stylesheet" 
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -71,39 +71,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </nav>
     <!-- /.navbar -->
 
-    <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-<a href="index.html" class="brand-link d-flex align-items-center">
 
-  <!-- LOGO -->
-  <img src="image/logo.png" 
-       alt="Logo" 
-       class="brand-image img-circle elevation-3" 
-       style="opacity: .8">
+      <a href="../frontend/home.html" class="brand-link d-flex align-items-center">
+        <div class="brand-text ml-2 d-flex flex-column" style="line-height: 1;">
+          <span class="font-weight-bold mb-1">Re:Laptop</span>
+        </div>
+      </a>
 
-  <!-- TEKS BRAND -->
-<div class="brand-text ml-2 d-flex flex-column" style="line-height: 1;">
-  <span class="font-weight-bold mb-1">Re:Laptop</span>
-</div>
-
-
-</a>
-
-
-      <!-- Sidebar -->
       <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
+
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="info">
-            <a href="#" class="d-block">Administrator</a>
+            <a href="admin-profile.html" class="d-block">Administrator</a>
           </div>
         </div>
 
-        <!-- SidebarSearch Form -->
         <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search">
-            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search">
             <div class="input-group-append">
               <button class="btn btn-sidebar">
                 <i class="fas fa-search fa-fw"></i>
@@ -112,56 +98,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
 
-        <!-- Sidebar Menu -->
+        <!-- MENU -->
         <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  DASHBOARD
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="dataseminar.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Data User</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="formseminar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Data Produk</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="daftarPeserta.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Histori</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
+          <ul class="nav nav-pills nav-sidebar flex-column">
 
-<br>
+            <li class="nav-item menu">
+              <a href="dashboard.html" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
 
             <li class="nav-item">
-              <a href="login.html" class="nav-link">
-                <i class="nav-icon fas fa-user"></i>
-                <p>
-                  LOGOUT
-                </p>
+              <a href="users-index.html" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Data User</p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="produk-index.html" class="nav-link">
+                <i class="nav-icon fas fa-laptop"></i>
+                <p>Data Produk</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="histori-index.html" class="nav-link">
+                <i class="nav-icon fas fa-history"></i>
+                <p>Histori</p>
+              </a>
+            </li>
+
+            <br>
+
+            <li class="nav-item">
+              <a href="../frontend/login.html" class="nav-link">
+                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <p>Logout</p>
+              </a>
+            </li>
+
           </ul>
         </nav>
-        <!-- /.sidebar-menu -->
+
       </div>
-      <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
@@ -175,7 +156,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="../frontend/home.html">Home</a></li>
                 <li class="breadcrumb-item active">Dashboard</li>
               </ol>
             </div><!-- /.col -->
@@ -187,60 +168,177 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Main content -->
       <div class="content">
         <div class="container-fluid">
-          <!-- Small boxes (Stat box) -->
+
+          <!-- ROW: STATISTIK KECIL -->
           <div class="row">
+
             <div class="col-lg-3 col-6">
-              <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>150</h3>
-
-                  <p>Data 1</p>
+                  <h3>128</h3>
+                  <p>Total Produk Laptop</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <i class="fas fa-laptop"></i>
                 </div>
-                <a href="dataseminar.html" class="small-box-footer">Selanjutnya <i
+                <a href="produk.html" class="small-box-footer">Lihat Produk <i
                     class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
-            <!-- ./col -->
+
             <div class="col-lg-3 col-6">
-              <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                  <p>Data 2</p>
+                  <h3>74</h3>
+                  <p>Laptop Terjual</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <i class="fas fa-shopping-cart"></i>
                 </div>
-                <a href="databerita.html" class="small-box-footer">Selanjutnya <i
+                <a href="transaksi.html" class="small-box-footer">Lihat Transaksi <i
                     class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
             <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
+              <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                  <p>Data 3</p>
+                  <h3>312</h3>
+                  <p>User Terdaftar</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <i class="fas fa-users"></i>
                 </div>
-                <a href="databerita.html" class="small-box-footer">Selanjutnya <i
-                    class="fas fa-arrow-circle-right"></i></a>
+                <a href="user.html" class="small-box-footer">Kelola User <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>9</h3>
+                  <p>Stok Habis</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <a href="produk.html" class="small-box-footer">Cek Stok <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
           </div>
 
+          <!-- ROW: CHART -->
+          <div class="row">
 
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
+            <!-- Area Chart -->
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title"><i class="fas fa-chart-line mr-1"></i> Penjualan 6 Bulan Terakhir</h3>
+                </div>
+                <div class="card-body">
+                  <canvas id="salesChart" height="100"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i> Persentase Kategori Laptop</h3>
+                </div>
+                <div class="card-body">
+                  <canvas id="categoryChart" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ROW: TABEL & PRODUK TERLARIS -->
+          <div class="row">
+
+            <!-- Tabel Transaksi Terbaru -->
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Transaksi Terbaru</h3>
+                </div>
+                <div class="card-body table-responsive p-0">
+                  <table class="table table-hover text-nowrap">
+                    <thead>
+                      <tr>
+                        <th>ID Transaksi</th>
+                        <th>Nama</th>
+                        <th>Produk</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#TRX1023</td>
+                        <td>Rizky</td>
+                        <td>Lenovo ThinkPad X280</td>
+                        <td>Rp 4.200.000</td>
+                        <td><span class="badge badge-success">Selesai</span></td>
+                      </tr>
+                      <tr>
+                        <td>#TRX1021</td>
+                        <td>Fahri</td>
+                        <td>Asus ROG GL504</td>
+                        <td>Rp 11.000.000</td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td>#TRX1018</td>
+                        <td>Salsa</td>
+                        <td>MacBook Air 2017</td>
+                        <td>Rp 6.300.000</td>
+                        <td><span class="badge badge-danger">Batal</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Produk Paling Laku -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Produk Paling Laku</h3>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group">
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Lenovo ThinkPad T480
+                      <span class="badge badge-primary badge-pill">32 terjual</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      Acer Nitro 5
+                      <span class="badge badge-primary badge-pill">27 terjual</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      MacBook Pro 2015
+                      <span class="badge badge-primary badge-pill">18 terjual</span>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
+
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -262,7 +360,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         Anything you want
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2024 <a href="">Kelompok 7</a>
+      <strong>Copyright &copy; 2025 <a href="">- Kelompok 15</a>
     </footer>
   </div>
   <!-- ./wrapper -->
@@ -275,6 +373,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    // AREA CHART PENJUALAN
+    const salesChart = new Chart(document.getElementById('salesChart'), {
+      type: 'line',
+      data: {
+        labels: ['Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+        datasets: [{
+          label: 'Laptop Terjual',
+          data: [10, 14, 8, 18, 12, 20],
+          fill: true,
+          borderWidth: 2
+        }]
+      }
+    });
+
+    // PIE CHART KATEGORI
+    const categoryChart = new Chart(document.getElementById('categoryChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Ultrabook', 'Gaming', 'Business', 'MacBook'],
+        datasets: [{
+          data: [35, 25, 20, 20]
+        }]
+      }
+    });
+  </script>
+
 </body>
 
 </html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Re:Laptop - Histori Transaksi</title>
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- NAVBAR -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Re:Laptop - Dashboard Admin</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+
+        <!-- SIDEBAR -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <a href="../frontend/home.html" class="brand-link d-flex align-items-center">
+                <div class="brand-text ml-2 d-flex flex-column" style="line-height: 1;">
+                    <span class="font-weight-bold mb-1">Re:Laptop</span>
+                </div>
+            </a>
+
+            <div class="sidebar">
+
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <a href="admin-profile.html" class="d-block">Administrator</a>
+                    </div>
+                </div>
+
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MENU -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+
+                        <li class="nav-item menu">
+                            <a href="dashboard.html" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="users-index.html" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Data User</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="produk-index.html" class="nav-link active">
+                                <i class="nav-icon fas fa-laptop"></i>
+                                <p>Data Produk</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="histori-index.html" class="nav-link">
+                                <i class="nav-icon fas fa-history"></i>
+                                <p>Histori</p>
+                            </a>
+                        </li>
+
+                        <br>
+
+                       <li class="nav-item">
+                            <a href="../frontend/login.html" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>Logout</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </aside>
+
+        <!-- CONTENT WRAPPER -->
+        <div class="content-wrapper">
+
+            <!-- HEADER -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+<h1 class="m-0">Data Produk</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="../frontend/home.html">Home</a></li>
+                                <li class="breadcrumb-item">Produk</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <section class="content">
+                <div class="container-fluid">
+
+<!-- TABEL PRODUK -->
+<div class="card">
+<div class="card-header">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="card-title">Daftar Produk</h3>
+        </div>
+        <div class="col-md-6 text-right">
+            <a href="form-produk.html" class="btn btn-success btn-sm">
+                <i class="fas fa-plus"></i> Tambah Produk
+            </a>
+        </div>
+    </div>
+</div>
+
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="text-center">1</td>
+                    <td><strong>Dell Latitude 5490</strong></td>
+                    <td>Rp 5.200.000</td>
+                    <td><span class="badge badge-success">Ready</span></td>
+                    <td>
+                        <a href="detail-produk.html" class="btn btn-success btn-sm">
+                            <i class="fas fa-eye"></i> Detail
+                        </a>
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i> Hapus
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-center">2</td>
+                    <td><strong>Lenovo ThinkPad X270</strong></td>
+                    <td>Rp 4.800.000</td>
+                    <td><span class="badge badge-success">Ready</span></td>
+                    <td>
+                        <a href="detail-produk.html" class="btn btn-success btn-sm">
+                            <i class="fas fa-eye"></i> Detail
+                        </a>
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i> Hapus
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-center">3</td>
+                    <td><strong>HP EliteBook 840 G3</strong></td>
+                    <td>Rp 5.800.000</td>
+                    <td><span class="badge badge-success">Ready</span></td>
+                    <td>
+                        <a href="detail-produk.html" class="btn btn-success btn-sm">
+                            <i class="fas fa-eye"></i> Detail
+                        </a>
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="fas fa-edit"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash"></i> Hapus
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+            <li class="page-item"><a class="page-link" href="#">«</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">»</a></li>
+        </ul>
+    </div>
+</div>
+
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-inline">Anything you want</div>
+            <strong>Copyright &copy; 2025 <a href="#">Kelompok 15</a>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+
+</body>
+
+</html>
