@@ -8,10 +8,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Re:Laptop - Jual/Beli Laptop Second</title>
+  <title>LaptopBekas.ID - Jual/Beli Laptop Second</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" 
+  <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -30,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Re:Laptop - Dashboard Admin</a>
+          <a href="#" class="nav-link">LaptopBekas.ID - Dashboard Admin</a>
         </li>
       </ul>
 
@@ -75,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <a href="../frontend/home.html" class="brand-link d-flex align-items-center">
         <div class="brand-text ml-2 d-flex flex-column" style="line-height: 1;">
-          <span class="font-weight-bold mb-1">Re:Laptop</span>
+          <span class="font-weight-bold mb-1">LaptopBekas.ID</span>
         </div>
       </a>
 
@@ -133,11 +133,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <br>
 
             <li class="nav-item">
-              <a href="../frontend/login.html" class="nav-link">
+              <a href="#" class="nav-link" id="btnLogout">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>Logout</p>
               </a>
             </li>
+
 
           </ul>
         </nav>
@@ -175,13 +176,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-lg-3 col-6">
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>128</h3>
+                  <h3>8</h3>
                   <p>Total Produk Laptop</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-laptop"></i>
                 </div>
-                <a href="produk.html" class="small-box-footer">Lihat Produk <i
+                <a href="produk-index.html" class="small-box-footer">Lihat Produk <i
                     class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
@@ -189,13 +190,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-lg-3 col-6">
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>74</h3>
+                  <h3>5</h3>
                   <p>Laptop Terjual</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
-                <a href="transaksi.html" class="small-box-footer">Lihat Transaksi <i
+                <a href="histori-index.html" class="small-box-footer">Lihat Transaksi <i
                     class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
@@ -203,26 +204,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-lg-3 col-6">
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>312</h3>
+                  <h3>10</h3>
                   <p>User Terdaftar</p>
                 </div>
-                <div class="icon">
+                <div class="icon"> 
                   <i class="fas fa-users"></i>
                 </div>
-                <a href="user.html" class="small-box-footer">Kelola User <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="users-index.html" class="small-box-footer">Kelola User <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
             <div class="col-lg-3 col-6">
               <div class="small-box bg-danger">
                 <div class="inner">
-                  <h3>9</h3>
+                  <h3>2</h3>
                   <p>Stok Habis</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-exclamation-triangle"></i>
                 </div>
-                <a href="produk.html" class="small-box-footer">Cek Stok <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="produk-index.html" class="small-box-footer">Cek Stok <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
 
@@ -374,6 +375,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    document.getElementById("btnLogout").addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // hapus status login
+      localStorage.removeItem("isLogin");
+
+      // redirect ke halaman home
+      window.location.href = "../frontend/home.html";
+    });
+  </script>
 
   <script>
     // AREA CHART PENJUALAN

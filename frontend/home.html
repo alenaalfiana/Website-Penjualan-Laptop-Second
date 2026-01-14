@@ -1,1023 +1,910 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>LaptopBekas.ID - Jual Beli Laptop Bekas Terpercaya</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: { 
-              primary: "#135bec",
-              "primary-dark": "#0f4bb8",
-              "background-light": "#f6f6f8",
-              "background-dark": "#101622",
-              "surface-light": "#ffffff",
-              "surface-dark": "#1a2230",
-              "text-main": "#111318",
-              "text-muted": "#616f89",
-            },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.375rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>LaptopBekas.ID - Jual Beli Laptop Bekas Terpercaya</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#135bec",
+            "primary-dark": "#0f4bb8",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1a2230",
+            "text-main": "#111318",
+            "text-muted": "#616f89",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.375rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
           },
         },
-      };
-    </script>
-    <style>
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-      input[name="modal_state"] {
-        display: none;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden"
-  >
-    <input checked="" id="modal_close" name="modal_state" type="radio" />
-    <input
-      class="peer/login"
-      id="modal_login"
-      name="modal_state"
-      type="radio"
-    />
-    <input
-      class="peer/register"
-      id="modal_register"
-      name="modal_state"
-      type="radio"
-    />
+      },
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-    <!-- Modal Login -->
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    input[name="modal_state"] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-x-hidden">
+  <input checked="" id="modal_close" name="modal_state" type="radio" />
+  <input class="peer/login" id="modal_login" name="modal_state" type="radio" />
+  <input class="peer/register" id="modal_register" name="modal_state" type="radio" />
+
+  <!-- Modal Login -->
+  <div
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm peer-checked/login:flex transition-opacity px-4">
     <div
-      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm peer-checked/login:flex transition-opacity px-4"
-    >
-      <div
-        class="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl dark:bg-surface-dark animate-[fadeIn_0.3s_ease-out]"
-      >
-        <label
-          class="absolute right-4 top-4 cursor-pointer text-text-muted hover:text-text-main dark:text-gray-400 dark:hover:text-white"
-          for="modal_close"
-        >
-          <span class="material-symbols-outlined">close</span>
-        </label>
-        <div class="mb-6 text-center">
-          <h3 class="text-2xl font-bold text-text-main dark:text-white">
-            Masuk Akun
-          </h3>
-          <p class="mt-2 text-sm text-text-muted dark:text-gray-400">
-            Silakan masuk untuk melanjutkan pembelian.
-          </p>
-        </div>
-        <form class="flex flex-col gap-4">
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Email Address</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="nama@email.com"
-              type="email"
-            />
-          </div>
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Password</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="••••••••"
-              type="password"
-            />
-          </div>
-          <div class="flex items-center justify-between">
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input
-                class="rounded border-gray-300 text-primary focus:ring-primary"
-                type="checkbox"
-              />
-              <span class="text-sm text-text-muted dark:text-gray-400"
-                >Ingat saya</span
-              >
-            </label>
-            <a class="text-sm font-medium text-primary hover:underline" href="#"
-              >Lupa password?</a
-            >
-          </div>
-          <button
-            class="mt-2 w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary-dark"
-            type="button"
-          >
-            Masuk Sekarang
-          </button>
-        </form>
-        <p class="mt-6 text-center text-sm text-text-muted dark:text-gray-400">
-          Belum punya akun?
-          <label
-            class="font-medium text-primary hover:underline cursor-pointer"
-            for="modal_register"
-            >Daftar disini</label
-          >
+      class="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl dark:bg-surface-dark animate-[fadeIn_0.3s_ease-out]">
+      <label
+        class="absolute right-4 top-4 cursor-pointer text-text-muted hover:text-text-main dark:text-gray-400 dark:hover:text-white"
+        for="modal_close">
+        <span class="material-symbols-outlined">close</span>
+      </label>
+      <div class="mb-6 text-center">
+        <h3 class="text-2xl font-bold text-text-main dark:text-white">
+          Masuk Akun
+        </h3>
+        <p class="mt-2 text-sm text-text-muted dark:text-gray-400">
+          Silakan masuk untuk melanjutkan pembelian.
         </p>
       </div>
-      <label
-        class="absolute inset-0 -z-10 cursor-default"
-        for="modal_close"
-      ></label>
-    </div>
-    <!-- / Modal Login -->
+      <form class="flex flex-col gap-4">
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Email Address</label>
+          <input id="loginEmail" type="email" placeholder="nama@email.com"
+            class="w-full rounded-lg border px-4 py-2.5" />
 
-    <!-- Modal Regist -->
-    <div
-      class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm peer-checked/register:flex transition-opacity px-4"
-    >
-      <div
-        class="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl dark:bg-surface-dark animate-[fadeIn_0.3s_ease-out] max-h-[90vh] overflow-y-auto"
-      >
-        <label
-          class="absolute right-4 top-4 cursor-pointer text-text-muted hover:text-text-main dark:text-gray-400 dark:hover:text-white"
-          for="modal_close"
-        >
-          <span class="material-symbols-outlined">close</span>
-        </label>
-        <div class="mb-6 text-center">
-          <h3 class="text-2xl font-bold text-text-main dark:text-white">
-            Daftar Akun Baru
-          </h3>
-          <p class="mt-2 text-sm text-text-muted dark:text-gray-400">
-            Buat akun untuk mulai berbelanja laptop impian.
-          </p>
         </div>
-        <form class="flex flex-col gap-4">
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Nama Lengkap</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="John Doe"
-              type="text"
-            />
-          </div>
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Email Address</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="nama@email.com"
-              type="email"
-            />
-          </div>
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Password</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="••••••••"
-              type="password"
-            />
-          </div>
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200"
-              >Konfirmasi Password</label
-            >
-            <input
-              class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
-              placeholder="••••••••"
-              type="password"
-            />
-          </div>
-          <div class="flex items-start gap-2 mt-1">
-            <input
-              class="mt-1 rounded border-gray-300 text-primary focus:ring-primary"
-              id="terms"
-              type="checkbox"
-            />
-            <label
-              class="text-xs text-text-muted dark:text-gray-400 leading-tight cursor-pointer"
-              for="terms"
-            >
-              Saya menyetujui
-              <a class="text-primary hover:underline" href="#"
-                >Syarat &amp; Ketentuan</a
-              >
-              serta
-              <a class="text-primary hover:underline" href="#"
-                >Kebijakan Privasi</a
-              >
-              LaptopBekas.
-            </label>
-          </div>
-          <button
-            class="mt-2 w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary-dark"
-            type="button"
-          >
-            Daftar Sekarang
-          </button>
-        </form>
-        <p class="mt-6 text-center text-sm text-text-muted dark:text-gray-400">
-          Sudah punya akun?
-          <label
-            class="font-medium text-primary hover:underline cursor-pointer"
-            for="modal_login"
-            >Masuk disini</label
-          >
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Password</label>
+          <input id="loginPassword" type="password" placeholder="••••••••"
+            class="w-full rounded-lg border px-4 py-2.5" />
+
+        </div>
+        <div class="flex items-center justify-between">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input class="rounded border-gray-300 text-primary focus:ring-primary" type="checkbox" />
+            <span class="text-sm text-text-muted dark:text-gray-400">Ingat saya</span>
+          </label>
+          <a class="text-sm font-medium text-primary hover:underline" href="#">Lupa password?</a>
+        </div>
+        <button id="loginBtn" type="button"
+          class="mt-2 w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white">
+          Masuk Sekarang
+        </button>
+      </form>
+      <p class="mt-6 text-center text-sm text-text-muted dark:text-gray-400">
+        Belum punya akun?
+        <label class="font-medium text-primary hover:underline cursor-pointer" for="modal_register">Daftar
+          disini</label>
+      </p>
+    </div>
+    <label class="absolute inset-0 -z-10 cursor-default" for="modal_close"></label>
+  </div>
+  <!-- / Modal Login -->
+
+  <!-- Modal Regist -->
+  <div
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm peer-checked/register:flex transition-opacity px-4">
+    <div
+      class="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl dark:bg-surface-dark animate-[fadeIn_0.3s_ease-out] max-h-[90vh] overflow-y-auto">
+      <label
+        class="absolute right-4 top-4 cursor-pointer text-text-muted hover:text-text-main dark:text-gray-400 dark:hover:text-white"
+        for="modal_close">
+        <span class="material-symbols-outlined">close</span>
+      </label>
+      <div class="mb-6 text-center">
+        <h3 class="text-2xl font-bold text-text-main dark:text-white">
+          Daftar Akun Baru
+        </h3>
+        <p class="mt-2 text-sm text-text-muted dark:text-gray-400">
+          Buat akun untuk mulai berbelanja laptop impian.
         </p>
       </div>
-      <label
-        class="absolute inset-0 -z-10 cursor-default"
-        for="modal_close"
-      ></label>
+      <form class="flex flex-col gap-4">
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Nama Lengkap</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
+            placeholder="John Doe" type="text" />
+        </div>
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Email Address</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
+            placeholder="nama@email.com" type="email" />
+        </div>
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Password</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
+            placeholder="••••••••" type="password" />
+        </div>
+        <div>
+          <label class="mb-2 block text-sm font-medium text-text-main dark:text-gray-200">Konfirmasi Password</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 bg-background-light px-4 py-2.5 text-text-main outline-none focus:border-primary focus:ring-1 focus:ring-primary dark:border-gray-600 dark:bg-background-dark dark:text-white"
+            placeholder="••••••••" type="password" />
+        </div>
+        <div class="flex items-start gap-2 mt-1">
+          <input class="mt-1 rounded border-gray-300 text-primary focus:ring-primary" id="terms" type="checkbox" />
+          <label class="text-xs text-text-muted dark:text-gray-400 leading-tight cursor-pointer" for="terms">
+            Saya menyetujui
+            <a class="text-primary hover:underline" href="#">Syarat &amp; Ketentuan</a>
+            serta
+            <a class="text-primary hover:underline" href="#">Kebijakan Privasi</a>
+            LaptopBekas.
+          </label>
+        </div>
+        <button
+          class="mt-2 w-full rounded-lg bg-primary py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary-dark"
+          type="button">
+          Daftar Sekarang
+        </button>
+      </form>
+      <p class="mt-6 text-center text-sm text-text-muted dark:text-gray-400">
+        Sudah punya akun?
+        <label class="font-medium text-primary hover:underline cursor-pointer" for="modal_login">Masuk disini</label>
+      </p>
     </div>
-    <!-- / Modal Regist -->
+    <label class="absolute inset-0 -z-10 cursor-default" for="modal_close"></label>
+  </div>
+  <!-- / Modal Regist -->
 
-    <!-- Navbar -->
-    <nav
-      class="sticky top-0 z-40 border-b border-[#f0f2f4] bg-white/90 px-6 py-3 backdrop-blur-md dark:border-gray-800 dark:bg-surface-dark/90 lg:px-20"
-    >
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
-        <div class="flex items-center gap-8">
-          <a
-            class="flex items-center gap-3 text-[#111318] dark:text-white"
-            href="#"
-          >
+  <!-- Navbar -->
+  <nav
+    class="sticky top-0 z-40 border-b border-[#f0f2f4] bg-white/90 px-6 py-3 backdrop-blur-md dark:border-gray-800 dark:bg-surface-dark/90 lg:px-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+      <div class="flex items-center gap-8">
+        <a class="flex items-center gap-3 text-[#111318] dark:text-white" href="#">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <span class="material-symbols-outlined text-3xl">laptop_mac</span>
+          </div>
+          <h2 class="text-xl font-bold tracking-tight">LaptopBekas.ID</h2>
+        </a>
+      </div>
+      <div class="flex items-center gap-2 md:gap-6">
+        <div class="hidden items-center gap-6 md:flex">
+          <a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
+            href="#beranda">Beranda</a>
+          <a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
+            href="#feature">Fitur</a>
+          <a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
+            href="#kategori">Kategori</a>
+          <a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
+            href="#katalog">Katalog</a>
+          <a class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
+            href="#tentang">Tentang Kami</a>
+        </div>
+        <div class="flex gap-3">
+          <label
+            class="flex h-10 cursor-pointer items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-transform hover:scale-105 hover:bg-primary-dark"
+            for="modal_login">
+            Login
+          </label>
+          <label
+            class="hidden h-10 cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white px-5 text-sm font-bold text-text-main hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-white dark:hover:bg-gray-800 sm:flex"
+            for="modal_register">
+            Daftar
+          </label>
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-text-main md:hidden dark:text-white">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Hero Section -->
+  <section id="beranda">
+    <div class="w-full bg-white px-6 py-12 dark:bg-surface-dark lg:px-20 lg:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+          <!-- Text Content -->
+          <div class="flex flex-1 flex-col gap-6 text-left">
             <div
-              class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary"
-            >
-              <span class="material-symbols-outlined text-3xl">laptop_mac</span>
+              class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary">
+              <span class="material-symbols-outlined text-sm">verified</span>
+              Terpercaya &amp; Bergaransi
             </div>
-            <h2 class="text-xl font-bold tracking-tight">LaptopBekas.ID</h2>
+            <h1
+              class="text-4xl font-black leading-[1.1] tracking-tight text-text-main dark:text-white sm:text-5xl lg:text-6xl">
+              Laptop Premium, <br />
+              <span class="text-primary">Harga Minimum</span>
+            </h1>
+            <p class="max-w-xl text-lg text-text-muted dark:text-gray-300">
+              Temukan laptop bekas berkualitas tinggi yang telah lolos uji
+              fungsi ketat. Solusi cerdas untuk kebutuhan kerja, kuliah,
+              hingga gaming Anda.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <button
+                class="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 hover:bg-primary-dark">
+                Lihat Katalog
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-4 text-sm font-medium text-text-muted dark:text-gray-400"></div>
+          </div>
+          <!-- Hero Image -->
+          <div class="relative flex-1">
+            <div
+              class="relative z-10 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl lg:aspect-square lg:h-auto lg:max-h-[500px]">
+              <div class="absolute inset-0 bg-cover bg-center"
+                data-alt="Modern sleek laptop on a clean wooden desk workspace" style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT3l1fevZ024zm6u4uoqAFRUIUTtLGNk2JFQBONs5F_96BQUgR47v54YAZioTuU2h5_CqMA7-m5WrRlWdjbF9D-Z11Mhb4tt8_3rY6LHh8KCEQy3R7JHrTwB_Fi1jnFUYc71y3v_3rCDoJdB3LHA3LWEXhjoXHDfIa6YZ-6ek1PcSgDDzz8QKu-Yrb4iooa1D2jQDqiT9ZHU6zi133yHBCcxZd4qf1CB8kJp-uyi_HCM893iIG0SADfbjnLZfxK3LvRqeQqKZFJxQ');
+                  "></div>
+              <!-- Floating Badge -->
+              <div
+                class="absolute bottom-6 left-6 right-6 rounded-xl bg-white/90 p-4 backdrop-blur-md dark:bg-gray-900/90 sm:bottom-8 sm:left-8 sm:right-auto sm:max-w-xs">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600">
+                    <span class="material-symbols-outlined">percent</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-text-main dark:text-white">
+                      Promo Spesial
+                    </p>
+                    <p class="text-sm text-text-muted dark:text-gray-400">
+                      Potongan hingga 20% untuk pembelian pertama.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Decorative blob -->
+            <div class="absolute -right-10 -top-10 -z-10 h-64 w-64 rounded-full bg-primary/20 blur-3xl"></div>
+            <div class="absolute -bottom-10 -left-10 -z-10 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Hero Section -->
+
+  <!-- Feature Section -->
+  <section id="feature">
+    <div class="bg-background-light px-6 py-16 dark:bg-background-dark lg:px-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-black tracking-tight text-text-main dark:text-white md:text-4xl">
+            Kenapa Belanja di Sini?
+          </h2>
+          <p class="mt-4 text-text-muted dark:text-gray-400">
+            Kami menjamin kepuasan dan ketenangan pikiran Anda.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div
+            class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-3xl">check_circle</span>
+            </div>
+            <div>
+              <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">
+                Quality Checked
+              </h3>
+              <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                Setiap unit melewati 20+ titik pemeriksaan hardware dan
+                software sebelum dijual.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-3xl">security</span>
+            </div>
+            <div>
+              <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">
+                Garansi 1 Tahun
+              </h3>
+              <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                Kami memberikan perlindungan penuh service dan sparepart
+                selama 12 bulan.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div
+            class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-3xl">local_shipping</span>
+            </div>
+            <div>
+              <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">
+                Gratis Ongkir
+              </h3>
+              <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                Pengiriman aman dengan packing kayu gratis ke seluruh wilayah
+                Jawa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Feature Section -->
+
+  <!-- Category Section -->
+  <section id="kategori">
+    <div class="bg-white px-6 py-16 dark:bg-surface-dark lg:px-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-8 flex items-end justify-between">
+          <h2 class="text-2xl font-bold leading-tight tracking-tight text-text-main dark:text-white md:text-3xl">
+            Kategori Populer
+          </h2>
+          <a class="hidden items-center text-sm font-bold text-primary hover:underline md:flex" href="#">
+            Lihat Semua
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
         </div>
-        <div class="flex items-center gap-2 md:gap-6">
-          <div class="hidden items-center gap-6 md:flex">
-            <a
-              class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
-              href="#beranda"
-              >Beranda</a
-            >
-            <a
-              class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
-              href="#feature"
-              >Fitur</a
-            >
-            <a
-              class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
-              href="#kategori"
-              >Kategori</a
-            >
-            <a
-              class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
-              href="#katalog"
-              >Katalog</a
-            >
-            <a
-              class="text-sm font-medium text-text-main hover:text-primary dark:text-gray-200 dark:hover:text-primary"
-              href="#tentang"
-              >Tentang Kami</a
-            >
-          </div>
-          <div class="flex gap-3">
-            <label
-              class="flex h-10 cursor-pointer items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-transform hover:scale-105 hover:bg-primary-dark"
-              for="modal_login"
-            >
-              Login
-            </label>
-            <label
-              class="hidden h-10 cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white px-5 text-sm font-bold text-text-main hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-white dark:hover:bg-gray-800 sm:flex"
-              for="modal_register"
-            >
-              Daftar
-            </label>
-            <button
-              class="flex h-10 w-10 items-center justify-center rounded-lg text-text-main md:hidden dark:text-white"
-            >
-              <span class="material-symbols-outlined">menu</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-
-    <!-- Hero Section -->
-    <section id="beranda">
-      <div
-        class="w-full bg-white px-6 py-12 dark:bg-surface-dark lg:px-20 lg:py-20"
-      >
-        <div class="mx-auto max-w-7xl">
-          <div
-            class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16"
-          >
-            <!-- Text Content -->
-            <div class="flex flex-1 flex-col gap-6 text-left">
-              <div
-                class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary"
-              >
-                <span class="material-symbols-outlined text-sm">verified</span>
-                Terpercaya &amp; Bergaransi
-              </div>
-              <h1
-                class="text-4xl font-black leading-[1.1] tracking-tight text-text-main dark:text-white sm:text-5xl lg:text-6xl"
-              >
-                Laptop Premium, <br />
-                <span class="text-primary">Harga Minimum</span>
-              </h1>
-              <p class="max-w-xl text-lg text-text-muted dark:text-gray-300">
-                Temukan laptop bekas berkualitas tinggi yang telah lolos uji
-                fungsi ketat. Solusi cerdas untuk kebutuhan kerja, kuliah,
-                hingga gaming Anda.
-              </p>
-              <div class="flex flex-wrap gap-4 pt-2">
-                <button
-                  class="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 hover:bg-primary-dark"
-                >
-                  Lihat Katalog
-                </button>
-              </div>
-              <div
-                class="mt-4 flex items-center gap-4 text-sm font-medium text-text-muted dark:text-gray-400"
-              ></div>
-            </div>
-            <!-- Hero Image -->
-            <div class="relative flex-1">
-              <div
-                class="relative z-10 aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl lg:aspect-square lg:h-auto lg:max-h-[500px]"
-              >
-                <div
-                  class="absolute inset-0 bg-cover bg-center"
-                  data-alt="Modern sleek laptop on a clean wooden desk workspace"
-                  style="
-                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT3l1fevZ024zm6u4uoqAFRUIUTtLGNk2JFQBONs5F_96BQUgR47v54YAZioTuU2h5_CqMA7-m5WrRlWdjbF9D-Z11Mhb4tt8_3rY6LHh8KCEQy3R7JHrTwB_Fi1jnFUYc71y3v_3rCDoJdB3LHA3LWEXhjoXHDfIa6YZ-6ek1PcSgDDzz8QKu-Yrb4iooa1D2jQDqiT9ZHU6zi133yHBCcxZd4qf1CB8kJp-uyi_HCM893iIG0SADfbjnLZfxK3LvRqeQqKZFJxQ');
-                  "
-                ></div>
-                <!-- Floating Badge -->
-                <div
-                  class="absolute bottom-6 left-6 right-6 rounded-xl bg-white/90 p-4 backdrop-blur-md dark:bg-gray-900/90 sm:bottom-8 sm:left-8 sm:right-auto sm:max-w-xs"
-                >
-                  <div class="flex items-start gap-4">
-                    <div
-                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600"
-                    >
-                      <span class="material-symbols-outlined">percent</span>
-                    </div>
-                    <div>
-                      <p class="font-bold text-text-main dark:text-white">
-                        Promo Spesial
-                      </p>
-                      <p class="text-sm text-text-muted dark:text-gray-400">
-                        Potongan hingga 20% untuk pembelian pertama.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Decorative blob -->
-              <div
-                class="absolute -right-10 -top-10 -z-10 h-64 w-64 rounded-full bg-primary/20 blur-3xl"
-              ></div>
-              <div
-                class="absolute -bottom-10 -left-10 -z-10 h-64 w-64 rounded-full bg-blue-400/20 blur-3xl"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- / Hero Section -->
-
-    <!-- Feature Section -->
-    <section id="feature">
-      <div
-        class="bg-background-light px-6 py-16 dark:bg-background-dark lg:px-20"
-      >
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-12 text-center">
-            <h2
-              class="text-3xl font-black tracking-tight text-text-main dark:text-white md:text-4xl"
-            >
-              Kenapa Belanja di Sini?
-            </h2>
-            <p class="mt-4 text-text-muted dark:text-gray-400">
-              Kami menjamin kepuasan dan ketenangan pikiran Anda.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Feature 1 -->
-            <div
-              class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark"
-            >
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >check_circle</span
-                >
-              </div>
-              <div>
-                <h3
-                  class="mb-2 text-xl font-bold text-text-main dark:text-white"
-                >
-                  Quality Checked
-                </h3>
-                <p
-                  class="text-sm leading-relaxed text-text-muted dark:text-gray-400"
-                >
-                  Setiap unit melewati 20+ titik pemeriksaan hardware dan
-                  software sebelum dijual.
-                </p>
-              </div>
-            </div>
-            <!-- Feature 2 -->
-            <div
-              class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark"
-            >
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors"
-              >
-                <span class="material-symbols-outlined text-3xl">security</span>
-              </div>
-              <div>
-                <h3
-                  class="mb-2 text-xl font-bold text-text-main dark:text-white"
-                >
-                  Garansi 1 Tahun
-                </h3>
-                <p
-                  class="text-sm leading-relaxed text-text-muted dark:text-gray-400"
-                >
-                  Kami memberikan perlindungan penuh service dan sparepart
-                  selama 12 bulan.
-                </p>
-              </div>
-            </div>
-            <!-- Feature 3 -->
-            <div
-              class="group flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg dark:border-gray-800 dark:bg-surface-dark"
-            >
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors"
-              >
-                <span class="material-symbols-outlined text-3xl"
-                  >local_shipping</span
-                >
-              </div>
-              <div>
-                <h3
-                  class="mb-2 text-xl font-bold text-text-main dark:text-white"
-                >
-                  Gratis Ongkir
-                </h3>
-                <p
-                  class="text-sm leading-relaxed text-text-muted dark:text-gray-400"
-                >
-                  Pengiriman aman dengan packing kayu gratis ke seluruh wilayah
-                  Jawa.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- / Feature Section -->
-
-    <!-- Category Section -->
-    <section id="kategori">
-      <div class="bg-white px-6 py-16 dark:bg-surface-dark lg:px-20">
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-8 flex items-end justify-between">
-            <h2
-              class="text-2xl font-bold leading-tight tracking-tight text-text-main dark:text-white md:text-3xl"
-            >
-              Kategori Populer
-            </h2>
-            <a
-              class="hidden items-center text-sm font-bold text-primary hover:underline md:flex"
-              href="#"
-            >
-              Lihat Semua
-              <span class="material-symbols-outlined text-sm"
-                >arrow_forward</span
-              >
-            </a>
-          </div>
-          <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-            <!-- Category 1 -->
-            <a
-              class="group relative aspect-square overflow-hidden rounded-xl"
-              href="#"
-            >
-              <div
-                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                data-alt="High performance gaming laptop with RGB keyboard"
-                style="
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <!-- Category 1 -->
+          <a class="group relative aspect-square overflow-hidden rounded-xl" href="#">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              data-alt="High performance gaming laptop with RGB keyboard" style="
                   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkQMm1IajzA-uvyz2FV6WthHcW4jTnRqN8V8PVT4jgqG7jaocb7Fon0TKj_0lJM19ZZkanhSzxP4CR_TLK1HaE3HKs2dSf0Tz8_dD2FH2gyEVcdlQZnzEG2kGrE5gWgSJoDWamywlWRdMdd8RlLpiDesW2IHmEQL3xutHDgx89XJE9ykLsHGug-THG9x0z0YHX1Q2kA_CzaoyPV4B1SdDSM39iDwaR3EX0lkPpbF4zbjxPoZgiOBJTls9xKCSK5JAoqv0wMW51XWI');
-                "
-              ></div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-              ></div>
-              <div class="absolute bottom-0 left-0 p-4">
-                <p class="font-bold text-white md:text-lg">Gaming</p>
-                <p class="text-xs text-gray-300 md:text-sm">Performa Tinggi</p>
-              </div>
-            </a>
-            <!-- Category 2 -->
-            <a
-              class="group relative aspect-square overflow-hidden rounded-xl"
-              href="#"
-            >
-              <div
-                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                data-alt="Slim silver ultrabook on a coffee table"
-                style="
+                "></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <p class="font-bold text-white md:text-lg">Gaming</p>
+              <p class="text-xs text-gray-300 md:text-sm">Performa Tinggi</p>
+            </div>
+          </a>
+          <!-- Category 2 -->
+          <a class="group relative aspect-square overflow-hidden rounded-xl" href="#">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              data-alt="Slim silver ultrabook on a coffee table" style="
                   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoh3tZWJGfwFgqsyHaDasD_N8z41r5--dW2XQfAMl2XaKt3Ie8fBCpJQxFqg4jUvwQKn58Ba4Qk0wvCPnpWWOy6vysZG3Fs9qDkhqnp6hf61JKw1BFBukqMeFbngmT-TAMn7sO9iHVBWvqNG1EdtEFfRLrVdidjlmycVRnPyzpet-PwxoIzQYfX9p6ZpFifuG62PCg81halDHSPy9AcfCgfg9uVaLxlXr1KRs1qLwapQzVYw4QeSO2HhUJ7sXE53ERAvcn6odKH8o');
-                "
-              ></div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-              ></div>
-              <div class="absolute bottom-0 left-0 p-4">
-                <p class="font-bold text-white md:text-lg">Ultrabook</p>
-                <p class="text-xs text-gray-300 md:text-sm">
-                  Tipis &amp; Ringan
-                </p>
-              </div>
-            </a>
-            <!-- Category 3 -->
-            <a
-              class="group relative aspect-square overflow-hidden rounded-xl"
-              href="#"
-            >
-              <div
-                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                data-alt="Professional workstation setup with multiple monitors"
-                style="
+                "></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <p class="font-bold text-white md:text-lg">Ultrabook</p>
+              <p class="text-xs text-gray-300 md:text-sm">
+                Tipis &amp; Ringan
+              </p>
+            </div>
+          </a>
+          <!-- Category 3 -->
+          <a class="group relative aspect-square overflow-hidden rounded-xl" href="#">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              data-alt="Professional workstation setup with multiple monitors" style="
                   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5t-t_wRg2qWXHEPmtSLR74e2rMxX8UNVuzIwXShzf2sxABJbxDlB023M33RrBWHjWm5TU1G6zHL50u5o3AWo891YOCyjj6fpc2ol6OiYSivh7N7BBoApCwHW-Gn7NN4uQjy4WDNdXdmEK1mD77olJ3cU_Gmmg3mrIzNbcHnAgCB9j-aFtgqQaQE6nYz8-0AKoqRYO--KitbpgV38-3BRGZ3U_eOM-dR7PLCM-CVkUOmhcSRuNjNiUi_5D_BnXz-K1t3Sim5pF_YA');
-                "
-              ></div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-              ></div>
-              <div class="absolute bottom-0 left-0 p-4">
-                <p class="font-bold text-white md:text-lg">Workstation</p>
-                <p class="text-xs text-gray-300 md:text-sm">
-                  Untuk Profesional
-                </p>
-              </div>
-            </a>
-            <!-- Category 4 -->
-            <a
-              class="group relative aspect-square overflow-hidden rounded-xl"
-              href="#"
-            >
-              <div
-                class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                data-alt="Stack of budget friendly laptops"
-                style="
+                "></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <p class="font-bold text-white md:text-lg">Workstation</p>
+              <p class="text-xs text-gray-300 md:text-sm">
+                Untuk Profesional
+              </p>
+            </div>
+          </a>
+          <!-- Category 4 -->
+          <a class="group relative aspect-square overflow-hidden rounded-xl" href="#">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              data-alt="Stack of budget friendly laptops" style="
                   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANeQqCS3S5Jb7kbuJ76T1YAoCQEiJremI08Yr0mHQebT04_ocyCxkAx3uHDp-iWK9s36j0_2Oan66_Wkk8tfAhwXY1qtKhvk2-kmE9aSUzRRbp2ZfkzbZwtEcOUe-Da_D1UiKGzjRq6p_c7J2s9wjPwQIgsFwJriF0ReOp4SUL-b9facWOROjnjJ6ZrQ4TTeRcfo2S05OuUMrGDZe_HfQCQFBf9MmtcwRB6cxEVEb7RYwxwB5yY2H1KKm1_f70nkIFaLraA7rW638');
-                "
-              ></div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-              ></div>
-              <div class="absolute bottom-0 left-0 p-4">
-                <p class="font-bold text-white md:text-lg">Budget Friendly</p>
-                <p class="text-xs text-gray-300 md:text-sm">Harga Terjangkau</p>
-              </div>
-            </a>
-          </div>
+                "></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4">
+              <p class="font-bold text-white md:text-lg">Budget Friendly</p>
+              <p class="text-xs text-gray-300 md:text-sm">Harga Terjangkau</p>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
-    <!-- / Category Section -->
+    </div>
+  </section>
+  <!-- / Category Section -->
 
-    <!-- Best Offers -->
-    <section id="katalog">
-      <div
-        class="bg-background-light px-6 py-16 dark:bg-background-dark lg:px-20"
-      >
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-10 text-center">
-            <h2
-              class="text-3xl font-black tracking-tight text-text-main dark:text-white md:text-4xl"
-            >
-              Penawaran Terbaik
-            </h2>
-            <p class="mt-4 text-text-muted dark:text-gray-400">
-              Laptop pilihan dengan kondisi terbaik minggu ini.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <!-- Product Card 1 -->
-            <a href="detail-produk-1.html" class="block rounded-xl">
-              <div
-                class="flex h-full flex-col rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800"
-              >
-                <div
-                  class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl"
-                >
-                  <div
-                    class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white"
-                  >
-                    Ready
-                  </div>
-                  <img
-                    alt="Laptop"
-                    class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrm1Wm4T27il6QVA3CFMWaK0yOjqaQxewKQ-Wq4bDB4zHBlvQ2L3aC211jxI6Y6L6s1pbdE4qwFoj-UIzM1Y0CtofmrLEGVvUmPaSSvEHNlj1GaAzAvo3GzA7rGZAIJsOYjXlqgWdfNgDZnGX96W2KkMmcShlm5To-R6yGbPR5mR3ogRunyB0PEWiKcKfr15iAkD5FEOPRsZ5RD6zbTY-OHSI4lDbT26RwQiOmYGIQ-6eHn_HEQCtG5dJQWBuZffzAZ7hwC7dL8QI"
-                  />
-                </div>
+  <!-- Best Offers -->
+  <section id="katalog">
+    <div class="bg-background-light px-6 py-16 dark:bg-background-dark lg:px-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 text-center">
+          <h2 class="text-3xl font-black tracking-tight text-text-main dark:text-white md:text-4xl">
+            Penawaran Terbaik
+          </h2>
+          <p class="mt-4 text-text-muted dark:text-gray-400">
+            Laptop pilihan dengan kondisi terbaik minggu ini.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                <div class="flex flex-1 flex-col p-4">
-                  <div
-                    class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted"
-                  >
-                    Apple
-                  </div>
-
-                  <h3
-                    class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white"
-                  >
-                    MacBook Pro M1 2020
-                  </h3>
-
-                  <div class="mb-4 flex flex-wrap gap-2">
-                    <span
-                      class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >
-                      8GB RAM
-                    </span>
-                    <span
-                      class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >
-                      256GB SSD
-                    </span>
-                  </div>
-
-                  <div class="mt-auto flex items-end justify-between">
-                    <div>
-                      <p class="text-xs text-text-muted line-through">
-                        Rp 14.000.000
-                      </p>
-                      <p class="text-lg font-bold text-primary">
-                        Rp 12.500.000
-                      </p>
-                    </div>
-
-                    <!-- Tombol tetap clickable tanpa redirect -->
-                    <button
-                      onclick="event.preventDefault()"
-                      class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white"
-                    >
-                      <span class="material-symbols-outlined">
-                        add_shopping_cart
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Product Card 2 -->
-            <a
-              href="detail-produk-2.html"
-              class="block rounded-xl"
-            >
-              <div
-                class="flex h-full flex-col rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800"
-              >
-                <div
-                  class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl"
-                >
-                  <div
-                    class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white"
-                  >
-                    Ready
-                  </div>
-                  <img
-                    alt="Laptop"
-                    class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1eRfLIBqN1lFakJPsMYbIVRFgToN3cJJ-71LMWeO9_xeV1DO188dLIZ3IbWJlUJVJgxmw5E6zuslUQvhrwxaH81Fj-Pc06AP3dgbU4vtKRB_5sH2uZjm80GGDbKt66QdNvwGvDMV74_lFbkkGufvqPqUgmPNoO2vr2tkoGbnJRW-Z8HEiF_Iu9WKjups90gF6wp2S2f1HFAaekO-j-twhjcDRKBsEWaXmo6nzsL6ZKids0Pq1UyUCT9zMkd4xpt3uwoD9yEfbgSE"
-                  />
-                </div>
-
-                <div class="flex flex-1 flex-col p-4">
-                  <div
-                    class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted"
-                  >
-                    Lenovo
-                  </div>
-
-                  <h3
-                    class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white"
-                  >
-                    ThinkPad X1 Carbon
-                  </h3>
-
-                  <div class="mb-4 flex flex-wrap gap-2">
-                    <span
-                      class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >
-                      16GB RAM
-                    </span>
-                    <span
-                      class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >
-                      512GB SSD
-                    </span>
-                  </div>
-
-                  <div class="mt-auto flex items-end justify-between">
-                    <div>
-                      <p class="text-xs text-text-muted line-through">
-                        Rp 11.000.000
-                      </p>
-                      <p class="text-lg font-bold text-primary">Rp 9.850.000</p>
-                    </div>
-
-                    <!-- Tombol tidak ikut redirect -->
-                    <button
-                      onclick="event.preventDefault()"
-                      class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white"
-                    >
-                      <span class="material-symbols-outlined">
-                        add_shopping_cart
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </a>
-
-            <!-- Product Card 3 -->
+          <!-- Product Card 1 -->
+          <a href="detail-produk-1.html" class="block rounded-xl">
             <div
-              class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800"
-            >
-              <div
-                class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl"
-              >
-                <div
-                  class="absolute right-3 top-3 z-10 rounded-md bg-red-500 px-2 py-1 text-xs font-bold text-white"
-                >
-                  Hot Deal
-                </div>
-                <img
-                  alt="Laptop"
-                  class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                  data-alt="Asus ROG Gaming Laptop with RGB lighting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdncuIJ4Ph9WleuEdAEAw147ViXZlUgiDEW9yoavlAozX68DpWoYHaFWQA_2m4vPF4_bYp7Scst-4L4pbWMVpPoB6XQEWIumkCzLVx1TBAShCnHuhDBLhUTrl6TeUAEXQ0449JlBiQ0t1MoUq7QIWhxneW4p27PJDGL6YII_In0NiB4r5mcbkfpYXSyqxJZs221mLfvP3pxikAvc0ExG_px0Lhad3BFgxair0rjKXzVKfFG_CRrGMXZLJsxIan4wI5p9TxBcwbJcY"
-                />
-              </div>
-              <div class="flex flex-1 flex-col p-4">
-                <div
-                  class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted"
-                >
-                  Asus
-                </div>
-                <h3
-                  class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white"
-                >
-                  ROG Zephyrus G14
-                </h3>
-                <div class="mb-4 flex flex-wrap gap-2">
-                  <span
-                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >16GB RAM</span
-                  >
-                  <span
-                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >Ryzen 7</span
-                  >
-                </div>
-                <div class="mt-auto flex items-end justify-between">
-                  <div>
-                    <p class="text-xs text-text-muted line-through">
-                      Rp 18.500.000
-                    </p>
-                    <p class="text-lg font-bold text-primary">Rp 16.200.000</p>
-                  </div>
-                  <button
-                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white"
-                  >
-                    <span class="material-symbols-outlined"
-                      >add_shopping_cart</span
-                    >
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- Product Card 4 -->
-            <div
-              class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800"
-            >
-              <div
-                class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl"
-              >
-                <div
-                  class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white"
-                >
+              class="flex h-full flex-col rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+              <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+                <div class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white">
                   Ready
                 </div>
-                <img
-                  alt="Laptop"
-                  class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                  data-alt="Dell XPS laptop with thin bezels"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBrxI2cSIn5uV81Zy1FridAvCoFLis3bBaAjzak0XvviWd63KvMPtZ0r1OBtgneTwr8NLy6o_yfFWnI60Q9vsZPVT_u5Lga2jWsDHSvwlY5bzyXmaG1o7HAxkX3ZX_G-Rx0cFQpqw6_NuH5Xi7wbmK6ckA1Hopzj5lIzdkZ9Av9uaFRndD6cFeXQrQz05FpX_TpYWqiSPRL3AGbdyvcD68Ho3YDTzoorQpOCP592GpLbc5oEylfFYs3ReRVPKLMhWu2IDPKaCNy6g"
-                />
+                <img alt="Laptop" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrm1Wm4T27il6QVA3CFMWaK0yOjqaQxewKQ-Wq4bDB4zHBlvQ2L3aC211jxI6Y6L6s1pbdE4qwFoj-UIzM1Y0CtofmrLEGVvUmPaSSvEHNlj1GaAzAvo3GzA7rGZAIJsOYjXlqgWdfNgDZnGX96W2KkMmcShlm5To-R6yGbPR5mR3ogRunyB0PEWiKcKfr15iAkD5FEOPRsZ5RD6zbTY-OHSI4lDbT26RwQiOmYGIQ-6eHn_HEQCtG5dJQWBuZffzAZ7hwC7dL8QI" />
               </div>
+
               <div class="flex flex-1 flex-col p-4">
-                <div
-                  class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted"
-                >
-                  Dell
+                <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+                  Apple
                 </div>
-                <h3
-                  class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white"
-                >
-                  XPS 13 9300
+
+                <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+                  MacBook Pro M1 2020
                 </h3>
+
                 <div class="mb-4 flex flex-wrap gap-2">
                   <span
-                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >Core i7</span
-                  >
+                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+                    8GB RAM
+                  </span>
                   <span
-                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400"
-                    >Touch</span
-                  >
+                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+                    256GB SSD
+                  </span>
                 </div>
+
                 <div class="mt-auto flex items-end justify-between">
                   <div>
                     <p class="text-xs text-text-muted line-through">
-                      Rp 15.000.000
+                      Rp 14.000.000
                     </p>
-                    <p class="text-lg font-bold text-primary">Rp 13.750.000</p>
+                    <p class="text-lg font-bold text-primary">
+                      Rp 12.500.000
+                    </p>
                   </div>
-                  <button
-                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white"
-                  >
-                    <span class="material-symbols-outlined"
-                      >add_shopping_cart</span
-                    >
+
+                  <!-- Tombol tetap clickable tanpa redirect -->
+                  <button onclick="event.preventDefault()"
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+                    <span class="material-symbols-outlined">
+                      add_shopping_cart
+                    </span>
                   </button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="mt-12 flex justify-center">
-            <button
-              class="group flex h-12 min-w-[200px] items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 text-sm font-bold text-text-main hover:bg-gray-50 hover:text-primary dark:border-gray-700 dark:bg-surface-dark dark:text-white dark:hover:bg-gray-800"
-            >
-              Lihat Semua Produk
-              <span
-                class="material-symbols-outlined transition-transform group-hover:translate-x-1"
-                >arrow_right_alt</span
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- / Best Offers -->
+          </a>
 
-    <!-- Footer -->
-    <section id="tentang">
-      <footer
-        class="bg-white pt-16 text-text-main dark:bg-surface-dark dark:text-white"
-      >
-        <div class="mx-auto max-w-7xl px-6 lg:px-20">
-          <div
-            class="grid grid-cols-1 gap-12 border-b border-gray-200 pb-12 dark:border-gray-800 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center gap-2 text-primary">
-                <span class="material-symbols-outlined text-3xl"
-                  >laptop_mac</span
-                >
-                <span class="text-xl font-bold">LaptopBekas</span>
+          <!-- Product Card 2 -->
+          <a href="detail-produk-2.html" class="block rounded-xl">
+            <div
+              class="flex h-full flex-col rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+              <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+                <div class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white">
+                  Ready
+                </div>
+                <img alt="Laptop" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1eRfLIBqN1lFakJPsMYbIVRFgToN3cJJ-71LMWeO9_xeV1DO188dLIZ3IbWJlUJVJgxmw5E6zuslUQvhrwxaH81Fj-Pc06AP3dgbU4vtKRB_5sH2uZjm80GGDbKt66QdNvwGvDMV74_lFbkkGufvqPqUgmPNoO2vr2tkoGbnJRW-Z8HEiF_Iu9WKjups90gF6wp2S2f1HFAaekO-j-twhjcDRKBsEWaXmo6nzsL6ZKids0Pq1UyUCT9zMkd4xpt3uwoD9yEfbgSE" />
               </div>
-              <p class="text-sm text-text-muted dark:text-gray-400">
-                Pusat jual beli laptop bekas berkualitas, aman, dan bergaransi
-                terpercaya di Indonesia.
-              </p>
+
+              <div class="flex flex-1 flex-col p-4">
+                <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+                  Lenovo
+                </div>
+
+                <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+                  ThinkPad X1 Carbon
+                </h3>
+
+                <div class="mb-4 flex flex-wrap gap-2">
+                  <span
+                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+                    16GB RAM
+                  </span>
+                  <span
+                    class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+                    512GB SSD
+                  </span>
+                </div>
+
+                <div class="mt-auto flex items-end justify-between">
+                  <div>
+                    <p class="text-xs text-text-muted line-through">
+                      Rp 11.000.000
+                    </p>
+                    <p class="text-lg font-bold text-primary">Rp 9.850.000</p>
+                  </div>
+
+                  <!-- Tombol tidak ikut redirect -->
+                  <button onclick="event.preventDefault()"
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+                    <span class="material-symbols-outlined">
+                      add_shopping_cart
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold">Layanan Pelanggan</h4>
-              <nav
-                class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400"
-              >
-                <a class="hover:text-primary" href="#">Cara Pembelian</a>
-                <a class="hover:text-primary" href="#">Konfirmasi Pembayaran</a>
-                <a class="hover:text-primary" href="#">Status Pengiriman</a>
-                <a class="hover:text-primary" href="#">Pengajuan Garansi</a>
-              </nav>
+          </a>
+
+          <!-- Product Card 3 -->
+          <div
+            class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+              <div class="absolute right-3 top-3 z-10 rounded-md bg-red-500 px-2 py-1 text-xs font-bold text-white">
+                Hot Deal
+              </div>
+              <img alt="Laptop" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                data-alt="Asus ROG Gaming Laptop with RGB lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdncuIJ4Ph9WleuEdAEAw147ViXZlUgiDEW9yoavlAozX68DpWoYHaFWQA_2m4vPF4_bYp7Scst-4L4pbWMVpPoB6XQEWIumkCzLVx1TBAShCnHuhDBLhUTrl6TeUAEXQ0449JlBiQ0t1MoUq7QIWhxneW4p27PJDGL6YII_In0NiB4r5mcbkfpYXSyqxJZs221mLfvP3pxikAvc0ExG_px0Lhad3BFgxair0rjKXzVKfFG_CRrGMXZLJsxIan4wI5p9TxBcwbJcY" />
             </div>
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold">Tentang Kami</h4>
-              <nav
-                class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400"
-              >
-                <a class="hover:text-primary" href="#">Profil Perusahaan</a>
-                <a class="hover:text-primary" href="#"
-                  >Syarat &amp; Ketentuan</a
-                >
-                <a class="hover:text-primary" href="#">Kebijakan Privasi</a>
-                <a class="hover:text-primary" href="#">Hubungi Kami</a>
-              </nav>
-            </div>
-            <div class="flex flex-col gap-4">
-              <h4 class="font-bold">Berlangganan Newsletter</h4>
-              <p class="text-sm text-text-muted dark:text-gray-400">
-                Dapatkan info promo terbaru langsung ke email Anda.
-              </p>
-              <div class="flex">
-                <input
-                  class="w-full rounded-l-lg border border-r-0 border-gray-300 bg-background-light px-4 py-2 text-sm outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-background-dark"
-                  placeholder="Email Anda"
-                  type="email"
-                />
+            <div class="flex flex-1 flex-col p-4">
+              <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+                Asus
+              </div>
+              <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+                ROG Zephyrus G14
+              </h3>
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span
+                  class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">16GB
+                  RAM</span>
+                <span
+                  class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">Ryzen
+                  7</span>
+              </div>
+              <div class="mt-auto flex items-end justify-between">
+                <div>
+                  <p class="text-xs text-text-muted line-through">
+                    Rp 18.500.000
+                  </p>
+                  <p class="text-lg font-bold text-primary">Rp 16.200.000</p>
+                </div>
                 <button
-                  class="rounded-r-lg bg-primary px-4 py-2 font-bold text-white hover:bg-primary-dark"
-                >
-                  <span class="material-symbols-outlined text-sm">send</span>
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+                  <span class="material-symbols-outlined">add_shopping_cart</span>
                 </button>
               </div>
             </div>
           </div>
+          
+          <!-- Product Card 4 -->
           <div
-            class="flex flex-col items-center justify-between gap-4 py-8 md:flex-row"
-          >
-            <p class="text-sm text-text-muted dark:text-gray-500">
-              © 2023 LaptopBekas. All rights reserved.
+            class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+              <div class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white">
+                Ready
+              </div>
+              <img alt="Laptop" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                data-alt="Dell XPS laptop with thin bezels"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBrxI2cSIn5uV81Zy1FridAvCoFLis3bBaAjzak0XvviWd63KvMPtZ0r1OBtgneTwr8NLy6o_yfFWnI60Q9vsZPVT_u5Lga2jWsDHSvwlY5bzyXmaG1o7HAxkX3ZX_G-Rx0cFQpqw6_NuH5Xi7wbmK6ckA1Hopzj5lIzdkZ9Av9uaFRndD6cFeXQrQz05FpX_TpYWqiSPRL3AGbdyvcD68Ho3YDTzoorQpOCP592GpLbc5oEylfFYs3ReRVPKLMhWu2IDPKaCNy6g" />
+            </div>
+            <div class="flex flex-1 flex-col p-4">
+              <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+                Dell
+              </div>
+              <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+                XPS 13 9300
+              </h3>
+              <div class="mb-4 flex flex-wrap gap-2">
+                <span
+                  class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">Core
+                  i7</span>
+                <span
+                  class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">Touch</span>
+              </div>
+              <div class="mt-auto flex items-end justify-between">
+                <div>
+                  <p class="text-xs text-text-muted line-through">
+                    Rp 15.000.000
+                  </p>
+                  <p class="text-lg font-bold text-primary">Rp 13.750.000</p>
+                </div>
+                <button
+                  class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+                  <span class="material-symbols-outlined">add_shopping_cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+<div
+  class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+  <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+    <div class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white">
+      Ready
+    </div>
+    <img
+      alt="HP Spectre Laptop"
+      class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+      src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" />
+  </div>
+  <div class="flex flex-1 flex-col p-4">
+    <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+      HP
+    </div>
+    <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+      Spectre x360
+    </h3>
+    <div class="mb-4 flex flex-wrap gap-2">
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        Core i7
+      </span>
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        16GB RAM
+      </span>
+    </div>
+    <div class="mt-auto flex items-end justify-between">
+      <div>
+        <p class="text-xs text-text-muted line-through">Rp 17.000.000</p>
+        <p class="text-lg font-bold text-primary">Rp 15.200.000</p>
+      </div>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 6 -->
+<div
+  class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+  <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+    <div class="absolute right-3 top-3 z-10 rounded-md bg-red-500 px-2 py-1 text-xs font-bold text-white">
+      Hot Deal
+    </div>
+    <img
+      alt="Acer Swift Laptop"
+      class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+      src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf" />
+  </div>
+  <div class="flex flex-1 flex-col p-4">
+    <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+      Acer
+    </div>
+    <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+      Swift 3 Ryzen
+    </h3>
+    <div class="mb-4 flex flex-wrap gap-2">
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        Ryzen 5
+      </span>
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        512GB SSD
+      </span>
+    </div>
+    <div class="mt-auto flex items-end justify-between">
+      <div>
+        <p class="text-xs text-text-muted line-through">Rp 10.500.000</p>
+        <p class="text-lg font-bold text-primary">Rp 9.300.000</p>
+      </div>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 7 -->
+<div
+  class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+  <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+    <div class="absolute right-3 top-3 z-10 rounded-md bg-green-500 px-2 py-1 text-xs font-bold text-white">
+      Ready
+    </div>
+    <img
+      alt="Microsoft Surface Laptop"
+      class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+      src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9" />
+  </div>
+  <div class="flex flex-1 flex-col p-4">
+    <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+      Microsoft
+    </div>
+    <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+      Surface Laptop 4
+    </h3>
+    <div class="mb-4 flex flex-wrap gap-2">
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        Ryzen 7
+      </span>
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        Touch
+      </span>
+    </div>
+    <div class="mt-auto flex items-end justify-between">
+      <div>
+        <p class="text-xs text-text-muted line-through">Rp 16.800.000</p>
+        <p class="text-lg font-bold text-primary">Rp 14.900.000</p>
+      </div>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 8 -->
+<div
+  class="flex flex-col rounded-xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-surface-dark dark:shadow-none dark:border dark:border-gray-800">
+  <div class="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+    <div class="absolute right-3 top-3 z-10 rounded-md bg-red-500 px-2 py-1 text-xs font-bold text-white">
+      Hot Deal
+    </div>
+    <img
+      alt="MSI Gaming Laptop"
+      class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+      src="https://images.unsplash.com/photo-1602080858428-57174f9431cf" />
+  </div>
+  <div class="flex flex-1 flex-col p-4">
+    <div class="mb-2 text-xs font-bold uppercase tracking-wider text-text-muted">
+      MSI
+    </div>
+    <h3 class="mb-2 text-lg font-bold leading-tight text-text-main dark:text-white">
+      Katana GF66
+    </h3>
+    <div class="mb-4 flex flex-wrap gap-2">
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        Core i7
+      </span>
+      <span class="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-text-muted dark:bg-gray-800 dark:text-gray-400">
+        RTX 3050
+      </span>
+    </div>
+    <div class="mt-auto flex items-end justify-between">
+      <div>
+        <p class="text-xs text-text-muted line-through">Rp 19.500.000</p>
+        <p class="text-lg font-bold text-primary">Rp 17.250.000</p>
+      </div>
+      <button
+        class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-white">
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Best Offers -->
+
+  <!-- Footer -->
+  <section id="tentang">
+    <footer class="bg-white pt-16 text-text-main dark:bg-surface-dark dark:text-white">
+      <div class="mx-auto max-w-7xl px-6 lg:px-20">
+        <div
+          class="grid grid-cols-1 gap-12 border-b border-gray-200 pb-12 dark:border-gray-800 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined text-3xl">laptop_mac</span>
+              <span class="text-xl font-bold">LaptopBekas</span>
+            </div>
+            <p class="text-sm text-text-muted dark:text-gray-400">
+              Pusat jual beli laptop bekas berkualitas, aman, dan bergaransi
+              terpercaya di Indonesia.
             </p>
-            <div class="flex gap-4">
-              <a
-                class="text-text-muted hover:text-primary dark:text-gray-500"
-                href="#"
-                ><i class="text-lg">IG</i></a
-              >
-              <a
-                class="text-text-muted hover:text-primary dark:text-gray-500"
-                href="#"
-                ><i class="text-lg">FB</i></a
-              >
-              <a
-                class="text-text-muted hover:text-primary dark:text-gray-500"
-                href="#"
-                ><i class="text-lg">TW</i></a
-              >
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-bold">Layanan Pelanggan</h4>
+            <nav class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400">
+              <a class="hover:text-primary" href="#">Cara Pembelian</a>
+              <a class="hover:text-primary" href="#">Konfirmasi Pembayaran</a>
+              <a class="hover:text-primary" href="#">Status Pengiriman</a>
+              <a class="hover:text-primary" href="#">Pengajuan Garansi</a>
+            </nav>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-bold">Tentang Kami</h4>
+            <nav class="flex flex-col gap-2 text-sm text-text-muted dark:text-gray-400">
+              <a class="hover:text-primary" href="#">Profil Perusahaan</a>
+              <a class="hover:text-primary" href="#">Syarat &amp; Ketentuan</a>
+              <a class="hover:text-primary" href="#">Kebijakan Privasi</a>
+              <a class="hover:text-primary" href="#">Hubungi Kami</a>
+            </nav>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-bold">Berlangganan Newsletter</h4>
+            <p class="text-sm text-text-muted dark:text-gray-400">
+              Dapatkan info promo terbaru langsung ke email Anda.
+            </p>
+            <div class="flex">
+              <input
+                class="w-full rounded-l-lg border border-r-0 border-gray-300 bg-background-light px-4 py-2 text-sm outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-background-dark"
+                placeholder="Email Anda" type="email" />
+              <button class="rounded-r-lg bg-primary px-4 py-2 font-bold text-white hover:bg-primary-dark">
+                <span class="material-symbols-outlined text-sm">send</span>
+              </button>
             </div>
           </div>
         </div>
-      </footer>
-    </section>
-    <!-- / Footer -->
-  </body>
+        <div class="flex flex-col items-center justify-between gap-4 py-8 md:flex-row">
+          <p class="text-sm text-text-muted dark:text-gray-500">
+            © 2023 LaptopBekas. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-text-muted hover:text-primary dark:text-gray-500" href="#"><i class="text-lg">IG</i></a>
+            <a class="text-text-muted hover:text-primary dark:text-gray-500" href="#"><i class="text-lg">FB</i></a>
+            <a class="text-text-muted hover:text-primary dark:text-gray-500" href="#"><i class="text-lg">TW</i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- / Footer -->
+
+  <script>
+    const DUMMY_EMAIL = "admin@laptopbekas.id";
+    const DUMMY_PASSWORD = "admin123";
+
+    document.getElementById("loginBtn").addEventListener("click", function () {
+      const emailInput = document.getElementById("loginEmail");
+      const passwordInput = document.getElementById("loginPassword");
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (email === DUMMY_EMAIL && password === DUMMY_PASSWORD) {
+        window.location.href = "../backend/dashboard.html";
+      } else {
+        alert("Email atau password salah!");
+        
+        emailInput.value = "";
+        passwordInput.value = "";
+
+        document.getElementById("modal_close").checked = true;
+      }
+    });
+  </script>
+
+</body>
+
 </html>

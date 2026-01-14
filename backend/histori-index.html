@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Re:Laptop - Histori Transaksi</title>
+    <title>LaptopBekas.ID - Histori Transaksi</title>
 
     <!-- Google Font -->
     <link rel="stylesheet"
@@ -30,9 +30,9 @@
                     </a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Re:Laptop - Dashboard Admin</a>
+                    <a href="#" class="nav-link">LaptopBekas.ID - Dashboard Admin</a>
                 </li>
-            </ul> 
+            </ul>
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -48,7 +48,7 @@
 
             <a href="../frontend/home.html" class="brand-link d-flex align-items-center">
                 <div class="brand-text ml-2 d-flex flex-column" style="line-height: 1;">
-                    <span class="font-weight-bold mb-1">Re:Laptop</span>
+                    <span class="font-weight-bold mb-1">LaptopBekas.ID</span>
                 </div>
             </a>
 
@@ -105,8 +105,8 @@
 
                         <br>
 
-                       <li class="nav-item">
-                            <a href="../frontend/login.html" class="nav-link">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="btnLogout">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>Logout</p>
                             </a>
@@ -289,6 +289,18 @@
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/adminlte.min.js"></script>
+
+    <script>
+        document.getElementById("btnLogout").addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // hapus status login
+            localStorage.removeItem("isLogin");
+
+            // redirect ke halaman home
+            window.location.href = "../frontend/home.html";
+        });
+    </script>
 
 </body>
 
